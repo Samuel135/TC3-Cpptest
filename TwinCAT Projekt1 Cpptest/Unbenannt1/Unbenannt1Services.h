@@ -27,6 +27,7 @@ typedef struct _Module1Parameter
 typedef struct _Module1Inputs
 {
 	ULONG Value;
+	ULONG Value2;
 	ULONG Status;
 	ULONG Data;
 	BOOL Rst;
