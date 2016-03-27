@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Header Files">
+			<UniqueIdentifier>{93a51d33-f0bd-4f22-8f06-50fb4e25e806}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source Files">
+			<UniqueIdentifier>{7f3f2698-472a-4f1d-82a4-0cad5336cd68}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="TwinCAT UM Files">
+			<UniqueIdentifier>{b13883b2-cdb0-46af-8378-4fd43ecf8955}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="TwinCAT RT Files">
+			<UniqueIdentifier>{f9a85320-3fb6-4410-b7f4-1d4cf5c29df7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="TMC Files">
+			<UniqueIdentifier>{ba16d371-bfdb-48b5-b21c-5e77f0684390}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="Resource.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="TcPch.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="Unbenannt1ClassFactory.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="Unbenannt1Interfaces.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="Unbenannt1Services.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="Unbenannt1Ctrl.h">
+			<Filter>TwinCAT UM Files</Filter>
+		</ClInclude>
+		<ClInclude Include="Unbenannt1Driver.h">
+			<Filter>TwinCAT RT Files</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="TcPch.cpp">
+			<Filter>Source Files</Filter>
+		</ClCompile>
+		<ClCompile Include="Unbenannt1ClassFactory.cpp">
+			<Filter>Source Files</Filter>
+		</ClCompile>
+		<ClCompile Include="Unbenannt1Ctrl.cpp">
+			<Filter>TwinCAT UM Files</Filter>
+		</ClCompile>
+		<ClCompile Include="Unbenannt1W32.cpp">
+			<Filter>TwinCAT UM Files</Filter>
+		</ClCompile>
+		<ClCompile Include="Unbenannt1Driver.cpp">
+			<Filter>TwinCAT RT Files</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="Unbenannt1.rc">
+			<Filter>Source Files</Filter>
+		</ResourceCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="Unbenannt1W32.def">
+			<Filter>TwinCAT UM Files</Filter>
+		</None>
+		<None Include="Unbenannt1.tmc">
+			<Filter>TMC Files</Filter>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<Midl Include="Unbenannt1W32.idl">
+			<Filter>TwinCAT UM Files</Filter>
+		</Midl>
+	</ItemGroup>
+</Project>
