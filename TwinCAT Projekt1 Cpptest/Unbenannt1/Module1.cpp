@@ -178,7 +178,7 @@ HRESULT CModule1::CycleUpdate(ITcTask* ipTask, ITcUnknown* ipCaller, ULONG_PTR c
 
 	if (m_Inputs.Rst)
 	{
-		m_counter = 1;
+		m_counter = 1;	// Reset counter to 1
 	}
 
 	return hr;
