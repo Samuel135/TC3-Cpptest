@@ -29,7 +29,7 @@ typedef struct _Module1Inputs
 	ULONG Value;
 	ULONG Status;
 	ULONG Data;
-	BOOL Rst;
+	BOOL Rst;	// Reset
 } Module1Inputs, *PModule1Inputs;
 
 typedef struct _Module1Outputs
