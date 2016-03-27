@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4018.5">
+  <POU Name="Ob2" Id="{2ee00881-c10b-4d2d-8200-a9c948ba3887}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Ob2
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	Length : UDINT := 3;
+	Height : UDINT := 2;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Area" Id="{ee34b72b-02b0-4047-b583-1d51441b8d96}">
+      <Declaration><![CDATA[METHOD Area : UDINT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Area := Length * Height;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="DefL" Id="{39c4a7d9-3377-4fe4-9237-47cb10a7412f}">
+      <Declaration><![CDATA[METHOD DefL : UDINT
+VAR_INPUT
+	L : UDINT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Length := L;
+DefL := Length;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

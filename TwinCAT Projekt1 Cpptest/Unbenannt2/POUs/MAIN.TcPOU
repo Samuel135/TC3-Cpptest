@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4018.5">
+  <POU Name="MAIN" Id="{ce71967a-b4ac-4053-945e-336d822bc275}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	In AT %I* : UDINT;
+	Out AT %Q* : UDINT;
+	Reset AT %Q* : BOOL;
+	Intern1 : UDINT;
+	Intern2 : UDINT;
+	Intern3 : UDINT;
+	Obj1 : Ob2;
+	Obj2 : Ob2;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF In < 800
+	THEN 	Out := 5;
+			Reset := FALSE;
+ELSIF In < 1000
+	THEN 	Out := 2;
+ELSE
+	Out := 0;
+	Reset := TRUE;
+	Ob.Doub();
+	Obj1.DefL(Intern3);
+	Obj2.DefL(Intern2);
+END_IF
+
+Intern3 := Converter(Intern1,Intern2);
+
+Intern1 := Ob.Val();
+Intern2 := Obj1.Area();
+Obj2.Area();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

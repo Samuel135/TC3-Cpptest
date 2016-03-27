@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4018.5">
+  <POU Name="Converter" Id="{b3802a70-0c81-49f0-a2ac-e3079f35e9ce}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Converter : UDINT
+VAR_INPUT
+	CIn1 : UDINT;
+	CIn2 : UDINT;
+END_VAR
+VAR
+	Intern3 : UDINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Intern3 := CIn1 + CIn2;
+Converter := Intern3;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

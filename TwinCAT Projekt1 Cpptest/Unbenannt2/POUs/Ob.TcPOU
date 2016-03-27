@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4018.5">
+  <POU Name="Ob" Id="{31dd8708-0a27-420a-b127-ca4d2488eda3}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Ob
+VAR
+	In1 : UDINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Action Name="Doub" Id="{8e89daa6-d8d8-4eb1-8477-788571898b4e}">
+      <Implementation>
+        <ST><![CDATA[In1 := 2*In1;]]></ST>
+      </Implementation>
+    </Action>
+    <Method Name="FB_init" Id="{16ee543a-ef3c-4c9d-b501-f20b1f7809ae}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[In1 := 5;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Load" Id="{e01d358b-c144-4cc4-aa8c-7de95aba9109}">
+      <Declaration><![CDATA[METHOD Load : UDINT
+VAR_INPUT
+	Input : UDINT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[In1 := Input;
+Load := In1;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Val" Id="{46d13bd9-8f57-4b16-ae6a-e53e219df70b}">
+      <Declaration><![CDATA[METHOD Val : UDINT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Val := In1;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
