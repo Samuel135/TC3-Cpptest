@@ -28,7 +28,6 @@ ELSE
 END_IF
 
 Intern3 := Converter(Intern1,Intern2);
-
 Intern1 := Ob.Val();
 Intern2 := Obj1.Area();
 Obj2.Area();]]></ST>
